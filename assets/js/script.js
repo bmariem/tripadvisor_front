@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           document
             .getElementById("message-sent")
-            .classList.remove("modal-hidden").
+            .classList.remove("modal-hidden");
 
 
           setTimeout(() => {
