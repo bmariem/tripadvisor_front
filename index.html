@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripAdvisor Japon</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <!--- IMPORT EXTERNAL FONTS -->
+    <script src="https://kit.fontawesome.com/e39aebbe53.js" crossorigin="anonymous"></script>
+    
+    <!--- IMPORT CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/font-icons.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--- IMPORT EXTERNAL AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <!--- IMPORT INTERNAL JS -->
+    <script src="./assets/js/script.js"></script>
+  </head>
+
+  <body id="body">
+    <header class="container"> 
+        <div class="header-first-half">
+        <i class="fas fa-bars"></i>
+        <img src="./assets/img/logo.svg" alt="Logo TripAdvisor" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="header-second-half">
+        <a href="#"><i class="fas fa-pen"></i><span>Avis</span></a>
+        <a href="#"><i class="far fa-heart"></i><span>Voyages</span></a>
+        <a href="#"><i class="far fa-bell"></i><span>Alertes</span></a>
+        <a href="#" id="form-button" class="button">Connectez-vous</a>
+      </div>
+    </header>
+
+    <main class="container" class="margin-top">
+      <h1><span>Explorez</span> Japon</h1>
+      
+      <nav class="menu" >
+        <div class="part1">
+          <div class="button-menu">
+            <span>Hôtel</span>
+              <span><i class="fas fa-bed"></i></span>
+          </div>
+          <div class="button-menu">
+            <span>Locations de vacances</span>
+            <span><i class="fas fa-home"></i></span>
+          </div>
+          <div class="button-menu">
+            <span>Activités</span>
+            <span><i class="fas fa-ticket-alt"></i></span>
+          </div>
+          <div class="button-menu">
+            <span>Restaurants</span>
+            <span><i class="fas fa-utensils"></i></span>
+          </div>
+        </div>
+
+        <div class="part2">
+          <div class="button-menu">
+            <span>Forums de voyage</span
+            ><span><i class="fas fa-comments"></i></span>
+          </div>
+
+          <div class="button-menu hide">
+            <span>Vols</span
+            ><span><i class="fas fa-plane-departure"></i></span>
+          </div>
+
+          <div class="button-menu hide">
+            <span>Croisières</span
+            ><span><i class="fas fa-ship"></i></span>
+          </div>
+
+          <div class="button-menu">
+            <span>Plus</span><span><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="photos">
+        <div class="col-1" >
+          <img src="./assets/img/con-la-primavera-in-giappone.jpg" alt="con la primavera in giappone">
+        </div>
+        <div class="col-2">
+          <img src="./assets/img/caption.jpg" alt="Le parc national d’Oze">
+          <img src="./assets/img/mt-fuji-and-tea-plantations.jpg" alt="mt fuji and tea plantations">
+        </div>
+      </div>
+
+      <nav class="nav">
+          <ul class="nav-ul">
+              <li>Asie</li>
+              <li>Japon</li>
+          </ul>
+      </nav>
+
+      <section class="description">
+        <h2>Japon : informations</h2>
+        <p>Au pays du soleil levant, les temples antiques côtoient des paysages urbains inondés de néons, et les sanctuaires shintoïstes constituent de véritables havres de paix à l'écart des métropoles. Ajoutez à cela les cérémonies du thé, les singes des neiges, les sushis, les kimonos et le karaoké, et vous obtenez l'un des pays les plus fascinants au monde.</p>
+      </section>
+
+      <section>
+        <h2>Japon : les immanquables</h2>
+        <div class="activities">
+          <div class="first-col">
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de modernité et de valeurs sûres.</p>
+            <a href="#" class="see-all">Tout afficher</a>
+          </div>
+          <div class="carousel">
+            <div>
+              <div class="carousel-img">
+                <img src="./assets/img/Hotel_Shiraume.jpg" alt="Hotel Shiraume">
+                <span class="award">
+                  <i class="fas fa-award"></i>
+                </span>
+                <span class="circle">
+                  <i class="fas fa-circle"></i>
+                </span>
+                <span class="heart">
+                  <i class="far fa-heart"></i>
+                </span> 
+              </div>
+              <div class="carousel-text">
+                <h4>Shiraume</h4>
+                <p>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i> 
+                  <span>676</span>  <br>
+                  Kyoto, Japon</p>
+              </div>
+            </div>
+              
+            <div>
+              <div class="carousel-img">
+                <img src="./assets/img/exterior.jpg" alt="Conrad Osaka">
+                <span class="award">
+                  <i class="fas fa-award"></i>
+                </span>
+                <span class="circle">
+                  <i class="fas fa-circle"></i>
+                </span>
+                <span class="heart">
+                  <i class="far fa-heart"></i>
+                </span> 
+              </div>
+              <div class="carousel-text">
+                <h4>Conrad Osaka</h4>
+                <p>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i> 
+                  <span>935</span><br>
+                  Osaka, Japon
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-img">
+                <img src="./assets/img/front-reception.jpg" alt="The Westin Sendai">
+                <span class="award">
+                  <i class="fas fa-award"></i>
+                </span>
+                <span class="circle">
+                  <i class="fas fa-circle"></i>
+                </span>
+                <span class="heart">
+                  <i class="far fa-heart"></i>
+                </span> 
+              </div>
+              <div class="carousel-text">
+                <h4>The Westin Sendai</h4>
+                <p>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i> 
+                  <span>773</span>  
+                  <br>
+                  Sendai, Japon
+                </p>
+              </div>
+            </div>
+            
+            <div>
+              <div class="carousel-img">
+                <img src="./assets/img/hakone.jpg" alt="hakone">
+                <span class="award">
+                  <i class="fas fa-award"></i>
+                </span>
+                <span class="circle">
+                  <i class="fas fa-circle"></i>
+                </span>
+                <span class="heart">
+                  <i class="far fa-heart"></i>
+                </span> 
+              </div>
+              <div class="carousel-text">
+                <h4>Hakone Yuyado Zen</h4>
+                <p><i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i> 
+                  <span>188</span><br>
+                  Hakone-machi, Japon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <div class="modal-content modal-hidden" id="modal">
+        <form class="form-container" id="form-container">
+          <h3>Contactez-nous</h3> 
+          <div class="cross" id="cross"><i class="fas fa-times"></i></div>
+          <input type="text" id="firstname" placeholder="Prénom">
+          <input type="text" id="lastname" placeholder="Nom">
+          <input type="email" id="email" placeholder="email">
+          <textarea name="" id="text" rows="5" placeholder="Ecrivez ici votre message"></textarea>
+          
+          <p class="error-message modal-hidden" id="error-message">Veuillez remplir tous les champs&nbsp!</p>
+          <input type="submit" value="Envoyer le formulaire" />
+          
+        </form>
+        <div class="message-sent modal-hidden" id="message-sent">
+          <p>Votre message a été envoyé avec succès.</p>
+          <p>Il sera traité dans les meilleurs délais.</p>
+          <p>
+            Nous vous remercions de votre intérêt pou TripAdvisor
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <img src="./assets/img/small-logo.svg" alt="samll logo hibou de TripAdvisor">
+      <p>Made with 
+        <i class="fas fa-heart"></i> 
+        by 
+        <a href="https://github.com/bmariem" target="_blank">Mariem Belgacem</a>
+    
+        &copy;
+        <span id="currentYear"></span>
+      </p> 
+    </footer>
+
+
+
+  </body>
+</html>
