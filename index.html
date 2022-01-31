@@ -242,12 +242,11 @@
       <form class="form-container" id="form-container">
         <h3>Contactez-nous</h3> 
         <div class="cross" id="cross"><i class="fas fa-times"></i></div>
-        <input type="text" id="firstname" placeholder="Prénom">
-        <input type="text" id="lastname" placeholder="Nom">
-        <input type="email" id="email" placeholder="email">
-        <textarea name="" id="text" rows="5" placeholder="Ecrivez ici votre message"></textarea>
-        
-        <p class="error-message modal-hidden" id="error-message">Veuillez remplir tous les champs&nbsp!</p>
+        <input type="text" id="firstname" placeholder="Prénom" required="required">
+        <input type="text" id="lastname" placeholder="Nom" required="required">
+        <input type="email" id="email" placeholder="email" required="required">
+        <textarea name="" id="text" rows="5" placeholder="Ecrivez ici votre message" required="required"></textarea>
+
         <input type="submit" value="Envoyer le formulaire" />
         
       </form>

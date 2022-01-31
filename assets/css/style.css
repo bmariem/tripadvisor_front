@@ -40,7 +40,7 @@ h4 {
   font-size: 16px;
   line-height: 19px;
   color: #333;
-  margin: 20px 0 0 ;
+  margin: 20px 0 0;
   padding: 0;
 }
 
@@ -357,7 +357,7 @@ h1 span {
   font-family: "Trip Sans Reg", sans-serif;
 }
 
- /* FOOTER  */
+/* FOOTER  */
 
 footer {
   height: 150px;
@@ -451,7 +451,7 @@ footer a:hover {
   width: 70%;
   font-family: "Trip Sans Reg", sans-serif;
   font-size: 13px;
-  padding: 5px; 
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid #54545475;
 }
@@ -464,7 +464,6 @@ input[type="submit"] {
   font-family: inherit;
   background-color: #34e0a1;
   color: #fff;
-
 }
 
 input[type="submit"]:hover {
@@ -488,20 +487,10 @@ input[type="submit"]:hover {
   max-height: 550px;
 }
 
-.error-message {
-  font-size: 18px;
-  text-align: center;
-  border-radius: 20px;
-  position: relative;
-  padding: 10px 0 20px;
-  color: red;
-}
-
 /* class cachée */
 .modal-hidden {
   display: none;
 }
-
 
 /* MEDIA QUERIES */
 

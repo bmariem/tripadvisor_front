@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get Current year
   let date = new Date();
   let year = date.getFullYear();
-  document.getElementById('currentYear').innerHTML = year;
+  document.getElementById("currentYear").innerHTML = year;
 
-  //Open Modal 
+  //Open Modal
   document.getElementById("form-button").addEventListener("click", () => {
     document.getElementById("modal").classList.remove("modal-hidden");
     document.getElementById("body").classList.add("body-no-scroll");
@@ -27,45 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
         email: document.getElementById("email").value,
         text: document.getElementById("text").value,
       };
-      
-      if (
-        document.getElementById("firstname").value &&
-        document.getElementById("lastname").value &&
-        document.getElementById("email").value &&
-        document.getElementById("text").value
-      ) {
-        const response = await axios.post(
-          "https://back-tripadvisor-japan.herokuapp.com/form",
-          data
-        );
-        if (response.status === 200) {
 
-          document
-            .getElementById("message-sent")
-            .classList.remove("modal-hidden");
-
-
-          setTimeout(() => {
-            document
-              .getElementById("message-sent")
-              .classList.add("modal-hidden");
-            document.getElementById("modal").classList.add("modal-hidden");
-            document.getElementById("body").classList.remove("body-no-scroll");
-         
-          }, 3000);
-        } else {
-          console.log(response.error);
-        }
-      } else {
+      const response = await axios.post(
+        "https://back-tripadvisor-japan.herokuapp.com/form",
+        data
+      );
+      if (response.status === 200) {
         document
-          .getElementById("error-message")
+          .getElementById("message-sent")
           .classList.remove("modal-hidden");
 
         setTimeout(() => {
-          document
-            .getElementById("error-message")
-            .classList.add("modal-hidden");
+          document.getElementById("message-sent").classList.add("modal-hidden");
+          document.getElementById("modal").classList.add("modal-hidden");
+          document.getElementById("body").classList.remove("body-no-scroll");
         }, 3000);
+      } else {
+        console.log(response.error);
       }
     });
 });
